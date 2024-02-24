@@ -38,14 +38,13 @@
                 <div class="col-lg-6 col-md-12">
                     <ul class="top-header-optional">
                         <li>
-                            <a href="https://www.whatsapp.com/" target="_blank">
+                            <a href="https://wa.link/aiictp" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </a>
-                            <a href="https://www.instagram.com/" target="_blank">
+                            <a href="https://www.instagram.com/dent_o_heal?igsh=NHBqY3dla2kwc3dn" target="_blank">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -59,7 +58,7 @@
                 <div class="col-lg-4 col-md-12">
                     <div class="middle-header">
                         <h1>
-                            <a href="index.html">DENT-O-HEAL</a>
+                            <a href="../index.html">DENT-O-HEAL</a>
                         </h1>
                     </div>
                 </div>
@@ -72,8 +71,8 @@
                         </li>
                         <li>
                             <i class="fa-regular fa-clock"></i>
-                            Open Hour
-                            <span>09:00 AM to 9:00 PM</span>
+                            Open Hour &nbsp; &nbsp;Monday - Saturday
+                            <span>10:30 AM to 2:30 PM - 5:00 AM to 8:30 PM</span>
                         </li>
                     </ul>
                 </div>
@@ -86,7 +85,7 @@
 
         <img src="../assets/images/ServicesDetails-imgs/Cosmetic-Dentistry.jpg" class="about-banner" alt="">
         <div class="container">
-                     <div class="page-banner-content">
+            <div class="page-banner-content">
                 <ul class="pages-list">
                     <li><a href="../services.html" style="font-size: 50px;">Services</a></li>
                     <li style="font-size: 50px;">Cosmetic Dentistry</li>
@@ -99,17 +98,24 @@
         <div class="row">
         </div>
         <div class="row p-4 justify-content-around">
-            <div class="col-4 box hidden"><img src="../assets/images/gallery/gallery-2 (1).jpg" style="border-radius: 20px;" alt=""></div>
+            <div class="col-4 box hidden"><img src="../assets/images/services/services-3.jpg"
+                    style="border-radius: 20px;" alt=""></div>
             <div class="col-7 box1">
                 <h1 class="pb-4">Cosmetic Dentistry</h1>
-              <span>
-                Discover the transformative power of cosmetic dentistry at Dent-O-Heal, where Dr. Sukhman Kaur combines artistic flair with advanced dental techniques. </span> <br><br>
+                <span>
+                    Discover the transformative power of cosmetic dentistry at Dent-O-Heal, where Dr. Sukhman Kaur
+                    combines artistic flair with advanced dental techniques. </span> <br><br>
 
-<span>From teeth whitening and veneers to complete smile makeovers, our cosmetic dentistry services are designed to enhance the aesthetics of your smile while ensuring optimal oral health.</span><br> <br>
+                <span>From teeth whitening and veneers to complete smile makeovers, our cosmetic dentistry services are
+                    designed to enhance the aesthetics of your smile while ensuring optimal oral health.</span><br> <br>
 
-<span>Located conveniently in Goregaon near Film City, Dent-O-Heal offers a welcoming environment where patients can explore a range of cosmetic solutions tailored to their unique preferences and goals.</span><br> <br>
+                <span>Located conveniently in Goregaon near Film City, Dent-O-Heal offers a welcoming environment where
+                    patients can explore a range of cosmetic solutions tailored to their unique preferences and
+                    goals.</span><br> <br>
 
-<span>Dr. Kaur's expertise in cosmetic dentistry, coupled with her commitment to patient satisfaction, makes Dent-O-Heal the premier choice for those seeking to achieve a radiant and confident smile.</span>
+                <span>Dr. Kaur's expertise in cosmetic dentistry, coupled with her commitment to patient satisfaction,
+                    makes Dent-O-Heal the premier choice for those seeking to achieve a radiant and confident
+                    smile.</span>
             </div>
         </div>
     </div>
@@ -120,7 +126,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="single-footer-widget">
                         <h2>
-                            <a href="index.html">DENT-O-HEAL</a>
+                            <a href="../index.html">DENT-O-HEAL</a>
                         </h2>
                         <p>Top Rated Orthodontist Near Film City</p>
                         <div class="footer-info">
@@ -175,8 +181,9 @@
                             </li>
                             <li>
                                 <i class="fa-solid fa-clock"></i>
-                                Open Hour
-                                <span>09:00 AM to 18:00 PM</span>
+                                Open Hour &nbsp; &nbsp;Monday - Saturday
+                                <span>10:30 AM to 2:30 PM </span>
+                                <span>5:00 AM to 8:30 PM </span>
                             </li>
                             <li>
                                 <i class="fa-solid fa-location-dot"></i>
@@ -188,14 +195,13 @@
                     </div>
                 </div>
             </div>
-          
         </div>
-
+        
         <div class="copyright-area-content">
             <p class="text-white">
                 © DENT-O-HEAL is proudly created by
                 <a class="text-success" href="https://sitesocials.com/" target="_blank">
-                   Sitesocials
+                    Sitesocials
                 </a>
             </p>
         </div>
@@ -210,51 +216,51 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-    <script>
-        
-  document.addEventListener("DOMContentLoaded", function() {
-    const image = document.querySelector('.about-banner');
-    if (image) {
-        image.classList.add('zoom-out');
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const image = document.querySelector('.about-banner');
+        if (image) {
+            image.classList.add('zoom-out');
+        }
+    });
+
+
+
+    // fade scroll
+
+    window.addEventListener('scroll', reveal);
+
+    function reveal() {
+        const boxes = document.querySelectorAll('.box');
+        boxes.forEach(box => {
+            const boxTop = box.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (boxTop < windowHeight * 0.75) {
+                box.classList.add('visible');
+            } else {
+                box.classList.remove('visible');
+            }
+        });
     }
-});
 
+    // right fade on scroll
 
+    window.addEventListener('scroll', reveal1);
 
-// fade scroll
-
-window.addEventListener('scroll', reveal);
-
-function reveal() {
-  const boxes = document.querySelectorAll('.box');
-  boxes.forEach(box => {
-    const boxTop = box.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    if (boxTop < windowHeight * 0.75) {
-      box.classList.add('visible');
-    } else {
-      box.classList.remove('visible');
+    function reveal1() {
+        const boxes = document.querySelectorAll('.box1');
+        boxes.forEach(box => {
+            const boxTop = box.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (boxTop < windowHeight * 0.75) {
+                box.classList.add('visible1');
+            } else {
+                box.classList.remove('visible1');
+            }
+        });
     }
-  });
-}
 
-// right fade on scroll
-
-window.addEventListener('scroll', reveal1);
-
-function reveal1() {
-  const boxes = document.querySelectorAll('.box1');
-  boxes.forEach(box => {
-    const boxTop = box.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    if (boxTop < windowHeight * 0.75) {
-      box.classList.add('visible1');
-    } else {
-      box.classList.remove('visible1');
-    }
-  });
-}
-
-    </script>
+</script>
 
 </html>

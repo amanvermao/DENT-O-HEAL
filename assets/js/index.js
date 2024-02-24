@@ -24,7 +24,6 @@ function showReviews(page) {
     dots[page - 1].classList.add('active1');
   }
 
-
   // email.js
   
  const form = document.querySelector("#main-form")
