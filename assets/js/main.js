@@ -18,3 +18,4 @@ $('.hospital-team-slides').owlCarousel({loop:true,nav:true,dots:false,autoplayHo
 function toggleTheme(){if(localStorage.getItem('grin_theme')==='theme-dark'){setTheme('theme-light');}else{setTheme('theme-dark');}}
 (function(){if(localStorage.getItem('grin_theme')==='theme-dark'){setTheme('theme-dark');document.getElementById('slider').checked=false;}else{setTheme('theme-light');document.getElementById('slider').checked=true;}})();
 
+
