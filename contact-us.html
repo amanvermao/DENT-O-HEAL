@@ -176,11 +176,11 @@
                 <h2>Drop Us Message for Any Query</h2>
             </div>
             <div class="contact-form">
-                <form id="contactForm">
+                <form id="contactForm" onsubmit="sendMail()">
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="name" id="name" class="form-control" required
+                                <input type="text" name="name" id="from_name" class="form-control" required
                                     data-error="Please enter your name" placeholder="Name">
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -194,14 +194,14 @@
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="phone_number" id="phone_number" required
+                                <input type="text" name="phone_number" id="phone" required
                                     data-error="Please enter your number" class="form-control" placeholder="Phone">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="msg_subject" id="msg_subject" class="form-control" required
+                                <input type="text" name="msg_subject" id="subject" class="form-control" required
                                     data-error="Please enter your subject" placeholder="Subject">
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -333,6 +333,55 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="assets/js/jquery.meanmenu.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+
+
+ const form = document.querySelector("#contactForm")
+
+form.addEventListener("submit",(e)=>{
+e.preventDefault();
+
+})
+
+
+ function sendMail(){
+   
+   (function() {
+     emailjs.init("S99lYlVwzfUuqPqZg");
+   })();
+
+   var params = {
+     from_name: document.querySelector("#from_name").value,
+     email: document.querySelector("#email").value,
+     phone: document.querySelector("#phone").value,
+     subject: document.querySelector("#subject").value,
+     message: document.querySelector("#message").value,
+     
+   };
+
+   var serviceID = "service_57h8ukx";
+   var templateID = "template_j8575zq";
+
+   emailjs.send(serviceID,templateID,params)
+   .then(res =>{
+
+     alert("email sent sucessfully")   
+     document.querySelector("#from_name").value = "";
+      document.querySelector("#email").value = "";
+      document.querySelector("#phone").value = "";
+      document.querySelector("#subject").value = "";
+      document.querySelector("#message").value ="";
+
+   })
+   .catch();
+ }
+ 
+
+// contact page email
+
+    </script>
 </body>
 
 </html>

@@ -24,6 +24,7 @@ function showReviews(page) {
     dots[page - 1].classList.add('active1');
   }
 
+
   // email.js
   
  const form = document.querySelector("#main-form")
@@ -66,7 +67,7 @@ function showReviews(page) {
   }
   
 
-
+  // zoom 
   document.addEventListener("DOMContentLoaded", function() {
     const image = document.querySelector('.main-banner-image img');
     if (image) {
